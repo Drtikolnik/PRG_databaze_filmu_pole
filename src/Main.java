@@ -5,6 +5,7 @@ public class Main {
 
         System.out.println("Kolik filmů chceš zadat?");
         int pocetFilmu = sc.nextInt();
+        sc.nextLine();;
         Film[] poleFilmu = new Film[pocetFilmu];
 
         //NASTAVENÍ FILMŮ
@@ -23,6 +24,7 @@ public class Main {
 
             System.out.println("KOLIK HERCŮ CHCEŠ ZADAT?");
             int pocetHercu = sc.nextInt();
+            sc.nextLine();
             Herec[] poleHercu = new Herec[pocetHercu];
 
             for (int j = 0; j < pocetHercu; j++) {
@@ -36,7 +38,12 @@ public class Main {
 
                 poleHercu[j] = new Herec(jmeno,rokNarozeni);
             }
-            Film film = new Film(nazev,rokVydani,hodnoceni, poleHercu);
+            poleFilmu[i] = new Film(nazev,rokVydani,hodnoceni, poleHercu);
+        }
+
+        System.out.println("FILMY KTERÉ MAJÍ HODNOCENÍ 80+ JSOU:");
+        for (int x = 0; x < pocetFilmu; x++) {
+                poleFilmu[x].vypisHodnoceniNad80();
         }
 
 

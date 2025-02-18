@@ -14,13 +14,32 @@ public class Film {
         this.herci = herci;
     }
 
-public String getNazev() {return nazev;
+    public void vypisHodnoceniNad80(){
+        if(hodnoceni > 80){
+            System.out.print(nazev+ " s ve kterém hrálo " +herci.length+ " herců");
+        }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+public String getNazev() {return nazev;}
+
 public int getRokVydani() {return rokVydani;}
 
-public void hodnoceni(int hodnoceni) {this.hodnoceni = hodnoceni;}
 
-public void setRokVydani(int rokVydani) {}
+public void sethodnoceni(int hodnoceni) {this.hodnoceni = hodnoceni;}
+
+public void setRokVydani(int rokVydani) {this.rokVydani = rokVydani;}
 
 
 
