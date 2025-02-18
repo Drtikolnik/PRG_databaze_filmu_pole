@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Kolik filmů chceš zadat?");
         int pocetFilmu = sc.nextInt();
         sc.nextLine();;
-        Film[] poleFilmu = new Film[pocetFilmu];
+        Film[] filmy = new Film[pocetFilmu];
 
         //NASTAVENÍ FILMŮ
         for (int i = 0; i < pocetFilmu; i++){
@@ -38,26 +38,19 @@ public class Main {
 
                 poleHercu[j] = new Herec(jmeno,rokNarozeni);
             }
-            poleFilmu[i] = new Film(nazev,rokVydani,hodnoceni, poleHercu);
+            filmy[i] = new Film(nazev,rokVydani,hodnoceni, poleHercu);
         }
 
         System.out.println("FILMY KTERÉ MAJÍ HODNOCENÍ 80+ JSOU:");
         for (int x = 0; x < pocetFilmu; x++) {
-                poleFilmu[x].vypisHodnoceniNad80();
+                filmy[x].vypisHodnoceniNad80();
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
+        System.out.println("FILM S NEJLEPŠÍM HODNICENÍM JE:");
+        Film nejlepsiFilm = new Film()
+        for (int y = 0; y < pocetFilmu; y++) {
+            if(filmy[y].getHodnoceni() < nejlepsiFilm.getHodnoceni)
+        }
 
 
 

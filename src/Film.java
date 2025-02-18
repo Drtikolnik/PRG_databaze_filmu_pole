@@ -6,6 +6,8 @@ public class Film {
     private int hodnoceni;
     private Herec[] herci;
 
+    private int nejlepsi;
+
 
     public Film(String nazev, int rokVydani, int hodnoceni, Herec[] herci) {
         this.nazev = nazev;
@@ -20,9 +22,6 @@ public class Film {
         }
     }
 
-    public void vypisHodnoceniNejlepsi(){
-
-    }
 
 
 
@@ -40,6 +39,7 @@ public int getRokVydani() {return rokVydani;}
 
 
 public void sethodnoceni(int hodnoceni) {this.hodnoceni = hodnoceni;}
+    public int getHodnoceni() {return hodnoceni;}
 
 public void setRokVydani(int rokVydani) {this.rokVydani = rokVydani;}
 
