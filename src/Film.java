@@ -16,11 +16,13 @@ public class Film {
 
     public void vypisHodnoceniNad80(){
         if(hodnoceni > 80){
-            System.out.print(nazev+ " s ve kterém hrálo " +herci.length+ " herců");
+            System.out.print(nazev+ " s ve kterém hrálo " +herci.length+ ". herců");
         }
     }
 
+    public void vypisHodnoceniNejlepsi(){
 
+    }
 
 
 
