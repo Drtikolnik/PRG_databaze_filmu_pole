@@ -1,15 +1,48 @@
 public class Film {
 
+
     private String nazev;
     private int rokVydani;
     private int hodnoceni;
-    Herec[] poleHercu;
+    private Herec[] herci;
 
-    public Film(String nazev, int rokVydani, int hodnoceni) {
+
+    public Film(String nazev, int rokVydani, int hodnoceni, Herec[] herci) {
         this.nazev = nazev;
         this.rokVydani = rokVydani;
         this.hodnoceni = hodnoceni;
+        this.herci = herci;
     }
+
+public String getNazev() {return nazev;
+    }
+public int getRokVydani() {return rokVydani;}
+
+public void hodnoceni(int hodnoceni) {this.hodnoceni = hodnoceni;}
+
+public void setRokVydani(int rokVydani) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

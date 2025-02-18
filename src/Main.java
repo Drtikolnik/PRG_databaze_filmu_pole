@@ -7,7 +7,9 @@ public class Main {
         int pocetFilmu = sc.nextInt();
         Film[] poleFilmu = new Film[pocetFilmu];
 
-        for (int i = 0; i < kolikFilmu; i++){
+        //NASTAVENÍ FILMŮ
+        for (int i = 0; i < pocetFilmu; i++){
+                System.out.println("ZADEJ INFORMACE O " +(i+1)+ ". FILMU:");
             System.out.println("NÁZEV:");
             String nazev = sc.nextLine();
 
@@ -19,25 +21,27 @@ public class Main {
             int hodnoceni = sc.nextInt();
             sc.nextLine();
 
-            System.out.println("Kolik herců chceš zadat?");
+            System.out.println("KOLIK HERCŮ CHCEŠ ZADAT?");
             int pocetHercu = sc.nextInt();
-            Herec[] poleHercu = new Herec[poceHercu];
+            Herec[] poleHercu = new Herec[pocetHercu];
 
+            for (int j = 0; j < pocetHercu; j++) {
+                System.out.println("ZADEJTE INFORMACE O " + (j + 1) + ". HERCI:");
+                System.out.print("JMÉNO: ");
+                String jmeno = sc.nextLine();
+
+                System.out.print("ROK NAROZENÍ: ");
+                int rokNarozeni = sc.nextInt();
+                sc.nextLine();
+
+                poleHercu[j] = new Herec(jmeno,rokNarozeni);
+            }
+            Film film = new Film(nazev,rokVydani,hodnoceni, poleHercu);
         }
 
 
 
 
-
-
-
-
-        Herec[] poleHercu = new Herec[1];
-        poleHercu[0] = new Herec("Daniel Landa", 1924);
-
-
-        Film[] poleFilmu = new Film[1];
-        poleFilmu[0] = new Film("ABRAHAM", 1999, 14 );
 
 
 
